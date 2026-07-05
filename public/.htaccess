@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ ../api/index.php [L]
+    RewriteRule ^login$ ../api/login.php [L]
+    RewriteRule ^register$ ../api/register.php [L]
+    RewriteRule ^logout$ ../api/logout.php [L]
+    RewriteRule ^katalog$ ../api/katalog.php [L]
+    RewriteRule ^book/([0-9]+)$ ../api/book_detail.php?id=$1 [L]
+    RewriteRule ^cart$ ../api/cart.php [L]
+    RewriteRule ^dashboard$ ../api/dashboard.php [L]
+    RewriteRule ^admin$ ../api/admin/dashboard.php [L]
+    RewriteRule ^admin/books$ ../api/admin/books.php [L]
+    RewriteRule ^admin/members$ ../api/admin/members.php [L]
+    RewriteRule ^admin/loans$ ../api/admin/loans.php [L]
+</IfModule>

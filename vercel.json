@@ -1,0 +1,25 @@
+{
+    "functions": {
+        "api/*.php": {
+            "runtime": "vercel-php@0.7.1"
+        },
+        "api/admin/*.php": {
+            "runtime": "vercel-php@0.7.1"
+        }
+    },
+    "routes": [
+        { "src": "/", "dest": "/api/index.php" },
+        { "src": "/login", "dest": "/api/login.php" },
+        { "src": "/register", "dest": "/api/register.php" },
+        { "src": "/logout", "dest": "/api/logout.php" },
+        { "src": "/katalog", "dest": "/api/katalog.php" },
+        { "src": "/book/([^/]+)", "dest": "/api/book_detail.php?id=$1" },
+        { "src": "/cart", "dest": "/api/cart.php" },
+        { "src": "/dashboard", "dest": "/api/dashboard.php" },
+        { "src": "/admin", "dest": "/api/admin/dashboard.php" },
+        { "src": "/admin/books", "dest": "/api/admin/books.php" },
+        { "src": "/admin/members", "dest": "/api/admin/members.php" },
+        { "src": "/admin/loans", "dest": "/api/admin/loans.php" },
+        { "src": "/(.*)", "dest": "/api/$1" }
+    ]
+}
